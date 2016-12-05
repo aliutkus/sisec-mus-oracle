@@ -23,7 +23,7 @@ def IBM(track):
         )
 
         # Create Binary Mask
-        Mask = np.divide(np.abs(M), (eps + np.abs(X)))
+        Mask = np.divide(np.abs(X), (eps + np.abs(M)))
         bg = np.where(Mask >= theta)
         sm = np.where(Mask < theta)
         Mask[bg[0], bg[1]] = 1.
@@ -46,5 +46,7 @@ dsd = dsdtools.DB()
 
 dsd.run(
     IBM,
-    estimates_dir='./IBM',
+    estimates_dir='IBM',
+    parallel=True,
+    cpus=4
 )
