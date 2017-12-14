@@ -1,5 +1,7 @@
 #### joe made this: http://goel.io/joe
 
+*.wav
+
 #####=== Python ===#####
 
 # Byte-compiled / optimized / DLL files
@@ -60,4 +62,3 @@ docs/_build/
 
 # PyBuilder
 target/
-
